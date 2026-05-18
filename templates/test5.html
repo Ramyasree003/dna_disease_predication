@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DNA Disease Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 28px;
+    }
+    h2 {
+      color: #34495e;
+      font-size: 22px;
+      margin-top: 40px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .record {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-left: 5px solid #3498db;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #dcdcdc;
+    }
+    th {
+      background-color: #f1f1f1;
+      color: #2c3e50;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+ <div class="card-body" id="mycard">
+	 
+  <div class="container">
+    <h1>🧬 DNA Disease Prediction</h1>
+
+    <h2>👤 Patient Information</h2>
+    <div class="record">
+	<p><span class="label">Patient ID:</span> PT{{data[0]}}</p>
+      <p><span class="label">Name:</span> {{data[1]}}</p>
+      <p><span class="label">Date of Birth:</span> {{data[3]}}</p>
+      <p><span class="label">Gender:</span> {{data[2]}}</p>
+	  <p><span class="label">Address:</span> {{data[6]}}, {{data[7]}}</p>
+      <p><span class="label">Report Date:</span> {{rdate}}</p>
+      
+    </div>
+
+    <h2>🧪 Genetic Findings & Disease Prediction</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Gene Variant</th>
+          <th>Type of DNA Change</th>
+          <th>Associated Disease</th>
+          <th>Implication</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{data1[0]}}</td>
+          <td>{{data1[1]}}</td>
+          <td>{{data1[2]}}</td>
+          <td>{{data1[3]}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>🍏 Personalized Recommendations</h2>
+    <div class="record">
+      <p><span class="label">Diet Recommendation:</span> {{data1[4]}}</p>
+      <p><span class="label">Lifestyle Suggestion:</span> {{data1[5]}}</p>
+      <p><span class="label">Foods to Eat:</span> {{data1[6]}}</p>
+      <p><span class="label">Foods to Avoid:</span> {{data1[7]}}</p>
+    </div>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+    <h2>🤖 AI Explanation</h2>
+    <div class="record">
+      <p><span class="label">Interpretation:</span> {{data1[8]}}</p>
+    </div>
+  </div>
+  
+  
+  
+ 
+  </div>
+  <br>
+
+<p align="center"> <button onClick="downloadPDF()" style="color:#000000">PDF Download</button></p>
+
+       
+            
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>
+    function downloadPDF() {
+        const element = document.getElementById("mycard");
+
+        html2pdf(element);
+    }
+</script>
+
+</body>
+</html>

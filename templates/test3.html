@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DNA Disease Dataset Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 28px;
+    }
+
+    h2 {
+      color: #34495e;
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #dcdcdc;
+    }
+
+    th {
+      background-color: #f1f1f1;
+      color: #2c3e50;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    .record {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-left: 5px solid #3498db;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DNA Disease Detection</h1>
+
+    <h2>Overview</h2>
+    <p>
+      This report presents insights from a genetic dataset highlighting mutations linked to diseases. Each entry contains detailed recommendations for diet and lifestyle based on genetic markers.
+    </p>
+
+    <h2>Description</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Column</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>Gene Variant / Mutation Identified</td>
+          <td>{{data1[0]}}</td>
+        </tr>
+        <tr>
+          <td>Type of DNA Change</td>
+          <td>{{data1[1]}}</td>
+        </tr>
+        <tr>
+          <td>Associated Disease / Risk</td>
+          <td>{{data1[2]}}</td>
+        </tr>
+        <tr>
+          <td>Implication</td>
+          <td>{{data1[3]}}</td>
+        </tr>
+        <tr>
+          <td>Diet Recommendation</td>
+          <td>{{data1[4]}}</td>
+        </tr>
+        <tr>
+          <td>Lifestyle Suggestion</td>
+          <td>{{data1[5]}}</td>
+        </tr>
+        <tr>
+          <td>Foods to Eat</td>
+          <td>{{data1[6]}}</td>
+        </tr>
+        <tr>
+          <td>Foods to Avoid</td>
+          <td>{{data1[7]}}</td>
+        </tr>
+        <tr>
+          <td>Text Prediction in detail</td>
+          <td>{{data1[8]}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</body>
+</html>

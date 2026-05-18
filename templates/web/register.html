@@ -1,0 +1,370 @@
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>DNA Disease</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../static/web/assets/img/favicon.ico">
+	<!-- Place favicon.ico in the root directory -->
+
+	<!-- ========================= CSS here ========================= -->
+	<link rel="stylesheet" href="../../static/web/assets/css/bootstrap-5.0.5-alpha.min.css">
+	<link rel="stylesheet" href="../../static/web/assets/css/LineIcons.2.0.css">
+	<link rel="stylesheet" href="../../static/web/assets/css/animate.css">
+	<link rel="stylesheet" href="../../static/web/assets/css/tiny-slider.css">
+	<link rel="stylesheet" href="../../static/web/assets/css/main.css">
+
+<style>
+       
+        .login-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+        }
+    </style>
+<script language="javascript">
+function validate()
+{
+	if(document.form1.name.value=="")
+	{
+	alert("Enter the Name");
+	document.form1.name.focus();
+	return false;
+	}
+	if(document.form1.dob.value=="")
+	{
+	alert("Enter the Date of Birth");
+	document.form1.dob.focus();
+	return false;
+	}
+	if(document.form1.mobile.value=="")
+	{
+	alert("Enter the Mobile No.");
+	document.form1.mobile.focus();
+	return false;
+	}
+	if(isNaN(document.form1.mobile.value))
+	{
+	alert("Invalid Mobile No.");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.mobile.value.length!=10)
+	{
+	alert("Mobile No. must be 10 digits!");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.email.value=="")
+	{
+	alert("Enter the Email");
+	document.form1.email.focus();
+	return false;
+	}
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.form1.email.value))  
+	{
+	
+	}
+	else
+	{
+	alert("Invalid E-mail!");
+	document.form1.email.select();
+	return false;
+	}
+	if(document.form1.address.value=="")
+	{
+	alert("Enter the Address");
+	document.form1.address.focus();
+	return false;
+	}
+	if(document.form1.city.value=="")
+	{
+	alert("Enter the City");
+	document.form1.city.focus();
+	return false;
+	}
+	if(document.form1.uname.value=="")
+	{
+	alert("Enter the Username");
+	document.form1.uname.focus();
+	return false;
+	}
+	if(document.form1.pass.value=="")
+	{
+	alert("Enter the Password");
+	document.form1.pass.focus();
+	return false;
+	}
+	if(document.form1.cpass.value=="")
+	{
+	alert("Enter the Confirm Password");
+	document.form1.cpass.focus();
+	return false;
+	}
+	if(document.form1.pass.value!=document.form1.cpass.value)
+	{
+	alert("Password does not match!");
+	document.form1.cpass.select();
+	return false;
+	}
+return true;
+}
+</script>
+
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+	<!-- ========================= preloader start ========================= -->
+	<!--<div class="preloader">
+		<div class="loader">
+			<div class="ytp-spinner">
+				<div class="ytp-spinner-container">
+					<div class="ytp-spinner-rotator">
+						<div class="ytp-spinner-left">
+							<div class="ytp-spinner-circle"></div>
+						</div>
+						<div class="ytp-spinner-right">
+							<div class="ytp-spinner-circle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<!-- preloader end -->
+
+	<!-- ========================= header start ========================= -->
+	<header id="home" class="header">
+
+		<div class="header-wrapper">
+				<div class="header-top theme-bg">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="header-top-left text-center text-md-left">
+									<ul>
+										<li><a href="#"><i class="lni lni-phone"></i> +463281626556</a></li>
+										<li><a href="#"><i class="lni lni-envelope"></i> medihealth@info.com</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="header-top-right d-none d-md-block">
+									<!--<ul>
+										<li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+										<li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+										<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+									</ul>-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<nav class="navbar navbar-expand-lg">
+									<a class="navbar-brand" href="../../static/web/index.html">
+										<img src="../../static/web/assets/img/logo/logo.png" alt="Logo">									</a>
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+										aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="toggler-icon"></span>
+										<span class="toggler-icon"></span>
+										<span class="toggler-icon"></span>									</button>
+				
+									<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+										<ul id="nav" class="navbar-nav ml-auto">
+											<li class="nav-item active">
+												<a class="page-scroll" href="/">Home</a>											</li>
+											<li class="nav-item">
+												<a class="page-scroll active" href="/login_user">Patient</a>											</li>
+											<li class="nav-item">
+												<a class="page-scroll" href="/login">Admin</a>											</li>
+											
+										</ul>
+									</div> <!-- navbar collapse -->
+								</nav> <!-- navbar -->
+							</div>
+						</div> <!-- row -->
+					</div> <!-- container -->
+				</div> <!-- navbar area -->
+		</div>
+
+		<div class="slider-wrapper">
+			<!-- ========================= slider-section start ========================= -->
+			
+			<!-- ========================= slider-section end ========================= -->
+		</div>
+	</header>
+	<!-- ========================= header end ========================= -->
+
+
+
+	<!--========================= we-do-section start========================= -->
+	<section class="we-do-section pt-150">
+		<div class="shape shape-1">
+			<img src="../../static/web/assets/img/shapes/shape-1.svg" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-8 mx-auto">
+					<div class="section-title text-center mb-55">
+						<span class="wow fadeInDown" data-wow-delay=".2s">Patient Registration</span>
+						
+					</div>
+				</div>
+			</div>
+			{% if msg=="success" %}
+			<span style="color:#006600">Registered Success</span>
+			<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/login_user';
+}, 2000);
+</script>
+			{% endif %}
+			{% if msg=="fail" %}
+			<span style="color:#FF0000">Already Exist!</span>
+			{% endif %}
+			<form name="form1" method="POST" action="">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					
+					<div class="row">
+						<div class="col-md-6">
+						<label>Name</label>
+						<input type="text" name="name" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>Date of Birth</label>
+						<input type="date" name="dob" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>Gender</label>
+						<select name="gender" class="form-control">
+						<option>Male</option>
+						<option>Female</option>
+						</select>
+						</div>
+						<div class="col-md-6">
+						<label>Mobile No.</label>
+						<input type="text" name="mobile" maxlength="10" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>Email</label>
+						<input type="text" name="email" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>Address</label>
+						<input type="text" name="address" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>City</label>
+						<input type="text" name="city" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>Username</label>
+						<input type="text" name="uname" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>Password</label>
+						<input type="password" name="pass" class="form-control">
+						</div>
+						<div class="col-md-6">
+						<label>Confirm Password</label>
+						<input type="password" name="cpass" class="form-control">
+						</div>
+						
+					</div>
+					<br>
+					<div class="row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6">
+						<button type="submit" name="btm" class="btn btn-primary" style="background-color:#009999" onClick="return validate()">Register</button>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			</form>
+	</div>
+	</section>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	
+	<!--========================= we-do-section start========================= -->
+
+	<!-- ========================= about-section start ========================= -->
+
+	<!-- ========================= about-section end ========================= -->
+
+	<!--========================= service-section start ========================= -->
+	
+	<!--========================= service-section end ========================= -->
+
+	<!-- ========================= testimonial-section start ========================= -->
+	
+	<!-- ========================= testimonial-section end ========================= -->
+
+	<!--========================= faq-section start ========================= -->
+
+	<!--========================= faq-section end ========================= -->
+
+	<!-- ========================= team-section start ========================= -->
+	
+	<!-- ========================= team-section end ========================= -->
+
+	<!-- ========================= subscribe-section start ========================= -->
+
+	<!-- ========================= subscribe-section end ========================= -->
+
+	<!-- ========================= blog-section start ========================= -->
+	
+	<!-- ========================= blog-section end ========================= -->
+
+	<!-- ========================= contact-section start ========================= -->
+
+	<!-- ========================= contact-section end ========================= -->
+
+	<!-- ========================= footer start ========================= -->
+	<footer class="footer pt-100 img-bg" style="background-image:url(../../static/web/assets/img/bg/footer-bg.jpg);">
+		<div class="container">
+			
+			<div class="copyright-area">
+				<p class="mb-0 text-center">DNA Disease <a href="https://uideck.com/" rel="nofollow"></a></p>
+			</div>
+		</div>
+	</footer>
+	<!-- ========================= footer end ========================= -->
+
+
+	<!-- ========================= scroll-top ========================= -->
+	<a href="#" class="scroll-top">
+		<i class="lni lni-arrow-up"></i>
+	</a>
+
+	<!-- ========================= JS here ========================= -->
+	<script src="../../static/web/assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
+	<script src="../../static/web/assets/js/wow.min.js"></script>
+	<script src="../../static/web/assets/js/tiny-slider.js"></script>
+	<script src="../../static/web/assets/js/main.js"></script>
+</body>
+
+</html>

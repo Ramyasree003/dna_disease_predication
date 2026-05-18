@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DNA Loading Animation</title>
+  <style>
+    body {
+      background-color: #f7f9fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .dna-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dna-loader {
+      display: flex;
+      position: relative;
+      height: 100px;
+      width: 60px;
+      animation: rotate 1.5s linear infinite;
+    }
+
+    .strand {
+      position: absolute;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to top, #00aaff, #0066ff);
+      border-radius: 3px;
+      animation: strand-wobble 1.5s ease-in-out infinite;
+    }
+
+    .strand:nth-child(2) {
+      left: auto;
+      right: 0;
+      background: linear-gradient(to top, #ff66cc, #cc0099);
+      animation-delay: 0.75s;
+    }
+
+    .dots {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      animation: dots-move 1.5s linear infinite;
+    }
+
+    .dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #333;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes strand-wobble {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(0.8); }
+    }
+
+    @keyframes dots-move {
+      0% { top: 0%; }
+      100% { top: 100%; }
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #0077b6;
+    }
+  </style>
+</head>
+<body>
+  <div class="dna-container">
+    <div class="dna-loader">
+      <div class="strand"></div>
+      <div class="strand"></div>
+      <div class="dots">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <h2>Analyzing Your DNA...</h2>
+  </div>
+</body>
+</html>
